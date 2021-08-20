@@ -1,0 +1,605 @@
+{
+	"info": {
+		"_postman_id": "f2d1a2c6-c47e-4691-aa56-5e816af080ff",
+		"name": "Enrollment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Filter students by course capacity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/filters?name=capacity&value=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "capacity"
+						},
+						{
+							"key": "value",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter students by lastname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/filters?name=lastname&value=gigi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "lastname"
+						},
+						{
+							"key": "value",
+							"value": "gigi"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter students by email",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/filters?name=email&value=gigi@aol.com",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "email"
+						},
+						{
+							"key": "value",
+							"value": "gigi@aol.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific student",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get non-registered students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/non-registered",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"non-registered"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get course a specific student is registered to",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/students/2/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"2",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update student",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"lastname\": \"Mark\",\n    \"email\": \"john.mark@aol.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"John\",\n    \"lastname\": \"Doe\",\n    \"email\": \"john.doe@aol.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Jimmy\",\n    \"lastname\": \"Mark\",\n    \"email\": \"jimmy.mark@aol.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter courses by title",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/filters?name=title&value=Biology",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "title"
+						},
+						{
+							"key": "value",
+							"value": "Biology"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter courses by subject",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/filters?name=subject&value=Human Sciences",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "subject"
+						},
+						{
+							"key": "value",
+							"value": "Human Sciences"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filter courses by capacity",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/filters?name=capacity&value=0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"filters"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "capacity"
+						},
+						{
+							"key": "value",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get empty courses",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/empty",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"empty"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get registered students to specific course",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/2/students",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"2",
+						"students"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create course",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Biology\",\n    \"description\": \"Introduction to biology\",\n    \"subject\": \"Human Sciences\",\n    \"teacher\": \"Mary Spencer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create multiple courses",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n    {\n    \"title\": \"Mechanics\",\n    \"description\": \"Introduction to mechanics\",\n    \"subject\": \"Human Skills\",\n    \"teacher\": \"John Travolta\",\n    \"students\": [\n        {\n            \"firstname\": \"Denisa\",\n            \"lastname\": \"Ionitoiu\",\n            \"email\": \"denisa.ionitoiu@aol.com\"\n        },\n        {\n            \"firstname\": \"Cristian\",\n            \"lastname\": \"Ionitoiu\",\n            \"email\": \"cristian.ionitoiu@aol.com\"\n        },\n        {\n            \"firstname\": \"mary\",\n            \"lastname\": \"scott\",\n            \"email\": \"may.scott@aol.com\"\n        }\n    ]\n    },\n    {\n    \"title\": \"Carpentry\",\n    \"description\": \"Introduction to carpentry\",\n    \"subject\": \"Human Skills\",\n    \"teacher\": \"Mary Travolta\",\n        \"students\": [\n        {\n            \"firstname\": \"Denisa\",\n            \"lastname\": \"Brad\",\n            \"email\": \"denisa.brad@aol.com\"\n        },\n        {\n            \"firstname\": \"Cristian\",\n            \"lastname\": \"Brad\",\n            \"email\": \"cristian.brad@aol.com\"\n        },\n        {\n            \"firstname\": \"mary\",\n            \"lastname\": \"stiller\",\n            \"email\": \"may.stiller@aol.com\"\n        }\n    ]\n    }\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/courses",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll student to course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Biology\",\n    \"description\": \"Introduction to biology\",\n    \"subject\": \"Human Sciences\",\n    \"teacher\": \"Mary Spencer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/courses/2/students/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"2",
+						"students",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update course",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Chemistry\",\n    \"description\": \"Introduction to Chemistry\",\n    \"subject\": \"Human Sciences\",\n    \"teacher\": \"John Spencer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete course",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/api/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get specific course",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Biology\",\n    \"description\": \"Introduction to biology\",\n    \"subject\": \"Human Sciences\",\n    \"teacher\": \"Mary Spencer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/api/courses/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"api",
+						"courses",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,34 @@
+version: "3"
+
+services:
+  app:
+    image: spring-enrollment-test:latest
+    build:
+      context: .
+    container_name: spring-enrollment
+    ports:
+      - "8085:8085"
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:mysql://db:3306/db
+      - SPRING_DATASOURCE_USERNAME=user
+      - SPRING_DATASOURCE_PASSWORD=password
+      - SPRING_JPA_HIBERNATE_DDL_AUTO=update
+
+  db:
+    image: mysql/mysql-server:latest
+    container_name: mysql01
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_DATABASE: "db"
+      # no root
+      MYSQL_USER: "user"
+      # You can use whatever password you like
+      MYSQL_PASSWORD: "password"
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: "password"
+
+
+
