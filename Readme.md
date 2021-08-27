@@ -17,7 +17,7 @@ mvn spring-boot:run
 ```
 or via Intellij using the Run/Debug configuration included as png.
 
-![](IntelliJ Run-Debug Configuration.png)
+![Configuration](https://github.com/cristiani/enrollment/blob/master/IntelliJ%20Run-Debug%20Configuration.png)
 
 There is a swagger information via:
 ```
