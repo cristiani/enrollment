@@ -45,7 +45,7 @@ public class Student implements Serializable {
             inverseJoinColumns = { @JoinColumn(name = "course_id") })
     private Set<Course> courses = new HashSet<>();
 
-    // cannot user lombok's as it conflicts with jpa
+    // cannot use lombok's as it conflicts with jpa
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
