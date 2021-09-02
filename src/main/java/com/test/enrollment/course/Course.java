@@ -44,7 +44,7 @@ public class Course  implements Serializable {
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REMOVE}, mappedBy = "courses")
     private Set<Student> students = new HashSet<>();
 
-    // cannot user lombok's as it conflicts with jpa
+    // cannot use lombok's as it conflicts with jpa
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
